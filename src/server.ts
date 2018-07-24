@@ -12,6 +12,11 @@ const users:IUser[] = [
   {id: 1, name: 'One'},
   {id: 2, name: 'Two'},
   {id: 3, name: 'Three'},
+  {id: 4, name: 'Four'},
+  {id: 5, name: 'Five'},
+  {id: 6, name: 'Six'},
+  {id: 7, name: 'Seven'},
+  {id: 8, name: 'Eight'},
 ]
 
 const posts = [
@@ -29,6 +34,8 @@ const posts = [
   {userId: 1, id: 12, name: 'T' },
 ]
 
+const delay = 5000
+
 userRouter.get('/', (req, res) => {
   return setTimeout(() => {
     res.json(
@@ -37,7 +44,7 @@ userRouter.get('/', (req, res) => {
         data: users,
       }
     )
-  }, 1500)
+  }, delay)
 })
 
 userRouter.get('/:userId', (req, res) => {
@@ -50,7 +57,7 @@ userRouter.get('/:userId', (req, res) => {
         )[0]
       }
     )
-  }, 1500)
+  }, delay)
 })
 
 app.use('/api/users', userRouter)
