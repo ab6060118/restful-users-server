@@ -30,23 +30,27 @@ const posts = [
 ]
 
 userRouter.get('/', (req, res) => {
-  return res.json(
-    {
-      status: 200,
-      data: users,
-    }
-  )
+  return setTimeout(() => {
+    res.json(
+      {
+        status: 200,
+        data: users,
+      }
+    )
+  }, 1500)
 })
 
 userRouter.get('/:userId', (req, res) => {
-  return res.json(
-    {
-      status: 200,
-      data: users.filter(
-        user => user.id === parseInt(req.params.userId)
-      )[0]
-    }
-  )
+  return setTimeout(() => {
+    res.json(
+      {
+        status: 200,
+        data: users.filter(
+          user => user.id === parseInt(req.params.userId)
+        )[0]
+      }
+    )
+  }, 1500)
 })
 
 app.use('/api/users', userRouter)
