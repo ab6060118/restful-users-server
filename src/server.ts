@@ -1,10 +1,11 @@
 import * as Express from 'express'
-import { users, posts, filters, localSystemEventLog } from "./data";
+import { users, posts, filters, localSystemEventLog, supportApps } from "./data";
 const app = Express();
 const userRouter = Express.Router();
 const postRouter = Express.Router();
 const filterRouter = Express.Router();
 const logRouter = Express.Router();
+const supportRouter = Express.Router();
 
 const delay = 500
 
@@ -67,11 +68,23 @@ logRouter.get('/', (req, res) => {
   }, delay)
 })
 
+supportRouter.get('/', (req, res) => {
+  return setTimeout(() => {
+    res.json(
+      {
+        status: 200,
+        data: supportApps
+      }
+    )
+  }, delay)
+})
+
 filterRouter.get('/:filterId')
 
 app.use('/api/users', userRouter)
 app.use('/api/posts', postRouter)
 app.use('/api/filters', filterRouter)
 app.use('/api/logs', logRouter)
+app.use('/api/support', supportRouter)
 
 app.listen(3000);
