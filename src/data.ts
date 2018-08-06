@@ -9,6 +9,7 @@ interface IUser {
 }
 
 interface IDate {
+  value:number
   start:string
   end:string
 }
@@ -63,6 +64,7 @@ export const filters:IFilter[] = [
     severity:1,
     name: 'filter1',
     date: {
+      value: 4,
       start: '2018/10/10',
       end: '2018/10/10'
     },
@@ -84,6 +86,7 @@ export const filters:IFilter[] = [
     severity: 2,
     name: 'filter2',
     date: {
+      value: 1,
       start: '2018/09/09',
       end: '2018/09/09'
     },
