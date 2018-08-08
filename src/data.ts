@@ -4,8 +4,14 @@ enum CONDITION_TYPE {
 }
 
 interface IUser {
-  id:number
-  name:string
+  pid:number
+  user:string
+  date:string
+  time:string
+  ip:string
+  comp:string
+  share:string
+  type:string
 }
 
 interface IDate {
@@ -33,14 +39,7 @@ interface IFilter {
 }
 
 export const users:IUser[] = [
-  {id: 1, name: 'One'},
-  {id: 2, name: 'Two'},
-  {id: 3, name: 'Three'},
-  {id: 4, name: 'Four'},
-  {id: 5, name: 'Five'},
-  {id: 6, name: 'Six'},
-  {id: 7, name: 'Seven'},
-  {id: 8, name: 'Eight'},
+  {pid: 1, user: 'One', date: '2018-08-08', time: '14:04:04', ip: '127.0.0.1', comp: '---', share: 'Administration', type: 'HTTP'},
 ]
 
 export const posts = [
