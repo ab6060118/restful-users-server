@@ -26,7 +26,7 @@ userRouter.get('/:userId', (req, res) => {
       {
         status: 200,
         data: users.filter(
-          user => user.id === parseInt(req.params.userId)
+          user => user.pid === parseInt(req.params.userId)
         )[0]
       }
     )
@@ -34,12 +34,13 @@ userRouter.get('/:userId', (req, res) => {
 })
 
 postRouter.get('/', (req, res) => {
+  console.log();
   return setTimeout(() => {
     res.json(
       {
         status: 200,
         data: posts.filter(
-          post => post.userId === parseInt(req.query.userId)
+          post => post.userId === parseInt(JSON.parse(req.query.filter)[0].value)
         )
       }
     )

@@ -43,18 +43,18 @@ export const users:IUser[] = [
 ]
 
 export const posts = [
-  {userId: 1, id: 1,  name: 'O', content: '1' },
-  {userId: 1, id: 2,  name: 'T', content: '2' },
-  {userId: 1, id: 3,  name: 'T', content: '3' },
-  {userId: 1, id: 4,  name: 'O', content: '4' },
-  {userId: 1, id: 5,  name: 'T', content: '5' },
-  {userId: 2, id: 6,  name: 'T', content: '6' },
-  {userId: 2, id: 7,  name: 'O', content: '7' },
-  {userId: 2, id: 8,  name: 'T', content: '8' },
-  {userId: 2, id: 9,  name: 'T', content: '9' },
-  {userId: 3, id: 10, name: 'O', content: '10' },
-  {userId: 1, id: 11, name: 'T', content: '11' },
-  {userId: 1, id: 12, name: 'T', content: '12' },
+  {userId: 1, id: 1,  title: 'O', content: '1' },
+  {userId: 1, id: 2,  title: 'T', content: '2' },
+  {userId: 1, id: 3,  title: 'T', content: '3' },
+  {userId: 1, id: 4,  title: 'O', content: '4' },
+  {userId: 1, id: 5,  title: 'T', content: '5' },
+  {userId: 2, id: 6,  title: 'T', content: '6' },
+  {userId: 2, id: 7,  title: 'O', content: '7' },
+  {userId: 2, id: 8,  title: 'T', content: '8' },
+  {userId: 2, id: 9,  title: 'T', content: '9' },
+  {userId: 3, id: 10, title: 'O', content: '10' },
+  {userId: 1, id: 11, title: 'T', content: '11' },
+  {userId: 1, id: 12, title: 'T', content: '12' },
 ]
 
 export const filters:IFilter[] = [
