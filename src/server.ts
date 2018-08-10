@@ -80,7 +80,18 @@ supportRouter.get('/', (req, res) => {
   }, delay)
 })
 
-filterRouter.get('/:filterId')
+filterRouter.get('/:filterId', (req, res) => {
+  return setTimeout(() => {
+    res.json(
+      {
+        status: 200,
+        data: filters.filter(
+          filter => filter.id === parseInt(req.params.filterId)
+        )[0]
+      }
+    )
+  }, delay)
+})
 
 app.use('/api/users', userRouter)
 app.use('/api/posts', postRouter)
