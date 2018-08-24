@@ -131,50 +131,46 @@ export const posts = [
   {userId: 1, id: 12, title: 'T', content: '12' },
 ]
 
-export const filters:IFilter[] = [
+export const filters:any[] = [
   {
-    id: 1,
-    severity:1,
-    name: 'filter1',
-    date: {
-      value: 4,
-      start: '2018/10/10',
-      end: '2018/10/10'
-    },
-    time: [[0,0],[23,59]],
-    users: {
-      condition: 1,
-      value: ['admin', 'test', 'user']
-    },
-    ip: {
-      condition: 1,
-      value: ['192.168.0.100']
-    },
-    app: { condition: 1, value: ['AppCenter'] },
-    category: { condition: 2, value: ['c001'] },
-    content: { condition: 1, value: ['a', '2'] }
+    "id":18,
+    "name":"test1",
+    "level":7,
+    "date_begin":"1992-10-10",
+    "date_end":"2018-10-10",
+    "time_begin":"00:00",
+    "time_end":"23:59",
+    "ip":"",
+    "user":"",
+    "computer":"",
+    "application":"",
+    "application_id":"",
+    "category":"",
+    "category_id":"",
+    "message":"",
+    "message_id":"",
+    "priority":1,
+    "highlight_id":0
   },
   {
-    id: 2,
-    severity: 2,
-    name: 'filter2',
-    date: {
-      value: 1,
-      start: '2018/09/09',
-      end: '2018/09/09'
-    },
-    time: [[0,0],[23,59]],
-    users: {
-      condition: 1,
-      value: ['admin', 'test', 'user']
-    },
-    ip: {
-      condition: 1,
-      value: ['192.168.0.100']
-    },
-    app: { condition: 1, value: ['AppCenter'] },
-    category: { condition: 2, value: ['c001'] },
-    content: { condition: 1, value: ['a', '2'] }
+    "id":19,
+    "name":"test2",
+    "level":7,
+    "date_begin":"1992-10-10",
+    "date_end":"2018-10-10",
+    "time_begin":"00:00",
+    "time_end":"23:59",
+    "ip":"",
+    "user":"",
+    "computer":"",
+    "application":"~file",
+    "application_id":"",
+    "category":"",
+    "category_id":"",
+    "message":"",
+    "message_id":"",
+    "priority":2,
+    "highlight_id":0
   }
 ]
 
